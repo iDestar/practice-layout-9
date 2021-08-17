@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":"AAAA,KACI,yBACA,qDACA,yGAIJ,IACI,YACA,a","sources":["webpack:///./src/styles/main.scss"],"sourcesContent":["body {\r\n    background-color: violets;\r\n    display: flex;\r\n    flex-direction: column;\r\n   \r\n}\r\n\r\nimg {\r\n    width: 100px;\r\n    height: 100px;;\r\n}"],"names":[],"sourceRoot":""}

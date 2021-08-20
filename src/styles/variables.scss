@@ -2,7 +2,7 @@
 
 $minWidth: 320px;
 $maxWidth: 1920;
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1122;
 $md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
@@ -15,4 +15,8 @@ $fontInter: 'Inter', sans-serif;
 $fontMulish: 'Mulish', sans-serif;
 $fontRusso:  'Russo One', sans-serif;
 
-$mainColor: #000;
+$mainColor: hsl(0, 0%, 0%);
+$orangeColor: hsl(39, 100%, 50%);
+$textColorWhite: #ffff;
+$titleColorDarkBlue: #152536;
+$titleSecondaryGrey: #6C757D

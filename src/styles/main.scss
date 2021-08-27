@@ -2,10 +2,24 @@
 @use 'icons';
 @use 'ui';
 @use 'mixins';
+@use 'header';
+@use 'page-main';
 @import 'variables';
 
-
 .container {
-    max-width: 1122px;
-    margin:  0 auto;
+  max-width: 1132px;
+  margin: 0 auto;
+  @media (max-width: $md1+px) {
+    //  background-color: red;
+    max-width: 970px;
+  }
+  @media (max-width: $md2+px) {
+    //  background-color: yellow;
+    max-width: 750px;
+  }
+  @media (max-width: $md3+px) {
+    // background-color: green;
+    max-width: none;
+    padding: 0 10px;
+  }
 }

@@ -16,6 +16,7 @@
   box-sizing: content-box;
   display: flex;
   position: relative;
+  @include adaptiv-value(' margin-bottom', 110, 89, 1);
 }
 .swiper-slide {
 }

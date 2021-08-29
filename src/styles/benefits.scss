@@ -1,0 +1,81 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.header {
+  // .header__benefits
+
+  &__benefits {
+  }
+}
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: $md2+px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  // .benefits__title
+
+  &__title {
+    @include adaptiv-value('font-size', 26, 20, 1);
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 120%;
+    letter-spacing: 0.13em;
+    color: $textColorWhite;
+    margin-bottom: 22px;
+  }
+
+  // .benefits__list
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 700px;
+    margin-left: auto;
+    justify-content: space-between;
+    @media (max-width: $md2+px) {
+      padding-left: 41px;
+      padding-right: 41px;
+      flex-basis: auto;
+      width: 100%;
+    }
+  }
+
+  // .benefits__list-item
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    align-items: center;
+    img {
+      width: 61px;
+      height: 61px;
+    }
+    @media (max-width: $md3+px) {
+      margin-right: 60px;
+    }
+    &:nth-child(2) {
+      @media (max-width: $md4+px) {
+        margin-right: 0px;
+      }
+    }
+    &:nth-child(4) {
+      @media (max-width: $md4+px) {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  // .benefits__list-text
+
+  &__list-text {
+    @include adaptiv-value('font-size', 18, 13, 1);
+    font-family: $fontMulish;
+    color: $textColorWhite;
+    line-height: 120%;
+    font-weight: 600;
+  }
+}

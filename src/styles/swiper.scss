@@ -1,0 +1,121 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.header {
+  // .header__swiper
+
+  &__swiper {
+    @include adaptiv-value('padding-top', 190, 167, 1);
+  }
+}
+.swiper {
+}
+.swiper-wrapper {
+  width: 90%;
+  height: 100%;
+  box-sizing: content-box;
+  display: flex;
+  position: relative;
+}
+.swiper-slide {
+}
+
+.slide-text {
+  @include adaptiv-value('border-width', 10, 5, 1);
+  border-left: 10px solid $orangeColor;
+}
+.slide {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  // .slide__title
+
+  &__top-line {
+    display: block;
+    position: relative;
+    @include adaptiv-value('width', 255, 129, 1);
+    @include adaptiv-value('margin-bottom', 66, 36, 1);
+    @include adaptiv-value('height', 10, 5, 1);
+    background-color: $orangeColor;
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      background-color: $orangeColor;
+      @include adaptiv-value('left', 225, 113, 1);
+      @include adaptiv-value('top', 20, 15, 1);
+      transform: rotate(90deg);
+      @include adaptiv-value('height', 10, 6, 1);
+      @include adaptiv-value('width', 50, 26, 1);
+    }
+  }
+
+  &__bottom-line {
+    position: relative;
+    @include adaptiv-value('width', 255, 130, 1);
+    @include adaptiv-value('margin-top', 66, 36, 1);
+    @include adaptiv-value('height', 10, 5, 1);
+    display: block;
+    width: 255px;
+    background-color: $orangeColor;
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      background-color: $orangeColor;
+      @include adaptiv-value('left', 225, 114, 1);
+      @include adaptiv-value('top', -25, -15, 1);
+      transform: rotate(90deg);
+      @include adaptiv-value('height', 10, 6, 1);
+      @include adaptiv-value('width', 50, 26, 1);
+    }
+  }
+
+  &__title {
+    position: relative;
+    @include adaptiv-value('font-size', 34, 18, 1);
+    @include adaptiv-value('padding-left', 59, 14, 1);
+    color: $textColorWhite;
+    font-weight: bold;
+    line-height: 120%;
+    &:not(:last-child) {
+      margin-bottom: 29px/34px * 1em;
+    }
+  }
+
+  // .slide__sub-title
+
+  &__sub-title {
+    @include adaptiv-value('font-size', 18, 12, 1);
+    @include adaptiv-value('padding-left', 59, 14, 1);
+    max-width: 660px;
+    color: $textColorWhite;
+    font-family: $fontMulish;
+    line-height: 120%;
+  }
+
+  // .slide__link
+
+  &__link {
+    @include adaptiv-value('font-size', 18, 12, 1);
+    @include adaptiv-value('min-height', 50, 35, 1);
+    @include adaptiv-value('width', 190, 130, 1);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: $orangeColor;
+    font-weight: 500;
+    line-height: 120%;
+    color: $textColorWhite;
+    align-self: center;
+    @media (max-width: $md4+px) {
+      position: static;
+      align-self: flex-start;
+      margin-top: 28px;
+    }
+  }
+}

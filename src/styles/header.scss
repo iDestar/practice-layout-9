@@ -4,6 +4,8 @@
 .page-header {
   background-image: url(/src/images/background1.jpg);
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   width: 100%;
   height: 100%;
 }
@@ -12,6 +14,10 @@
   display: flex;
   min-height: 65px;
   align-items: center;
+  @media (max-width: $md1+px) {
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .header {
@@ -31,19 +37,24 @@
   // .header__telefon
 
   &__telefon {
-    margin-left: 38px;
+    @include adaptiv-value('margin-left', 39, 15, 1);
   }
 
   // .header__actions
 
   &__actions {
     margin-left: auto;
+    @media (max-width: $md1+px) {
+      margin-left: 0;
+    }
   }
 }
 .main {
   display: flex;
   align-items: center;
   @media (max-width: $md1+px) {
+    position: relative;
+    z-index: 1000;
     text-align: center;
     margin: 0;
     flex-direction: column;
@@ -54,6 +65,7 @@
     width: 100%;
     border-radius: 0px 0px 20px 20px;
     padding-bottom: 39px;
+    padding-top: 63px;
     transform: translate(0, -130%);
     transition-duration: 0.3s;
   }
@@ -236,9 +248,11 @@
 
   &__search-form {
     @media (max-width: $md1+px) {
+      transition-duration: 0.3s;
       position: absolute;
       left: -100px;
       top: -200px;
+      display: none;
     }
   }
 
@@ -329,7 +343,9 @@
 }
 
 .search__form-active {
-  left: -140px;
+  display: block;
+  transition-duration: 0.3s;
+  left: -165px;
   top: 45px;
 }
 
@@ -337,9 +353,8 @@
   display: none;
   @media (max-width: $md1+px) {
     display: block;
-    position: absolute;
-    top: 18px;
-    left: 10px;
+    position: relative;
+
     width: 30px;
     height: 18px;
     cursor: pointer;

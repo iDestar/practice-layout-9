@@ -16,7 +16,6 @@ const iconMenuHandler = function () {
 };
 
 const iconSearchHandler = function () {
-  console.log(1);
   formSearch.classList.toggle('search__form-active');
 };
 

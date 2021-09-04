@@ -46,26 +46,28 @@
   display: flex;
   align-items: center;
   @media (max-width: $md1+px) {
-    position: relative;
+    position: absolute;
     z-index: 100;
     text-align: center;
     margin: 0;
     flex-direction: column;
     position: absolute;
-    top: 95%;
+    top: 52px;
     left: 0;
     background-color: $textColorWhite;
     width: 100%;
     border-radius: 0px 0px 20px 20px;
     padding-bottom: 39px;
     padding-top: 63px;
-    transform: translate(0, -400%);
-    transition-duration: 0.3s;
+    transition: transform 0.3s ease-in 0s;
+    transform: translate(0, -200%);
   }
 
   &.main__active {
-    transform: translate(0, -131%);
-    transition-duration: 0.3s;
+    transition: transform 0.3s ease-in 0s;
+    transform: translate(0, 0);
+    @media (max-width: $md3+px) {
+    }
   }
   // .main__logo
   &__logo {

@@ -5,6 +5,10 @@
   // .header__benefits
 
   &__benefits {
+    margin-bottom: 50px;
+  }
+  &__benefits.container {
+    margin-bottom: 50px;
   }
 }
 .benefits {
@@ -55,7 +59,7 @@
       height: 61px;
     }
     @media (max-width: $md3+px) {
-      margin-right: 60px;
+      margin-right: 75px;
     }
     &:nth-child(2) {
       @media (max-width: $md4+px) {

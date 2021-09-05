@@ -1,14 +1,13 @@
 import './styles/main.scss';
-import './images/product-photo-1@1x.jpg';
+import imgg from './images/catalog-item__back2.png';
 
 const headerMain = document.querySelector('.main');
 const iconMenu = document.querySelector('.icon-menu');
 const iconSearch = document.querySelector('.actions__search-icon');
 const formSearch = document.querySelector('.actions__search-form');
-
-iconSearch.addEventListener('click', function () {
-  console.log(123);
-});
+const catalogItems = document.querySelectorAll('.item-catalog');
+const catalogItem = document.querySelector('.item-catalog');
+const catalog = document.querySelector('.catalog__items');
 
 const iconMenuHandler = function () {
   headerMain.classList.toggle('main__active');
@@ -50,3 +49,13 @@ const swiper = new Swiper('.swiper', {
 
   // If we need pagination
 });
+
+// catalogItems.forEach((el) => {
+//   el.addEventListener('mouseover', function (e) {
+//     const target = e.target;
+//     const parentNode = target.parentNode.children;
+//     let img = parentNode[4];
+//     const imgSrc = img.getAttribute('src');
+//     img.setAttribute('src', imgg);
+//   });
+// });

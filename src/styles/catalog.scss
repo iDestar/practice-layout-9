@@ -21,6 +21,7 @@
 
 .catalog {
   &.container {
+    margin-bottom: 106px;
     @media (max-width: $md4+px) {
       padding-left: 17px;
       padding-right: 17px;
@@ -29,20 +30,15 @@
   // .catalog__title-block
 
   &__title-block {
-    border-left: solid $orangeColor;
-    @include adaptiv-value('border-width', 5, 3, 1);
+    @extend %title__block;
     margin-bottom: 50px;
   }
 
   // .catalog__title-top
 
   &__title-top {
-    display: block;
-    position: relative;
-    width: 75px;
+    @extend %title__top;
     margin-bottom: 16px;
-    @include adaptiv-value('height', 5, 3, 1);
-    background-color: $orangeColor;
   }
 
   // .catalog__title
@@ -57,12 +53,8 @@
   // .catalog__title-bottom
 
   &__title-bottom {
+    @extend %title__bottom;
     margin-top: 16px;
-    display: block;
-    position: relative;
-    width: 75px;
-    @include adaptiv-value('height', 5, 3, 1);
-    background-color: $orangeColor;
   }
 
   // .catalog__item

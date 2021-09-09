@@ -1,0 +1,141 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'ui';
+
+.main {
+  // .main__projects
+
+  &__projects {
+  }
+}
+.main-projects__wrapper {
+  background-color: #e5e5e5;
+  @include adaptiv-value('padding-top', 36, 30, 1);
+}
+.projects {
+  // .projects__title-block
+
+  &__title-block {
+    @include adaptiv-value('margin-bottom', 55, 21, 1);
+    @extend %title__block;
+  }
+
+  // .projects__title-top
+
+  &__title-top {
+    @extend %title__top;
+    @include adaptiv-value('margin-bottom', 33, 18, 1);
+  }
+
+  // .projects__title
+
+  &__title {
+    @include adaptiv-value('font-size', 24, 18, 1);
+    line-height: 120%;
+    font-weight: bold;
+    margin-left: 23px;
+    @media (min-width: $md4+px) {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  // .projects__title-bottom
+
+  &__title-bottom {
+    @extend %title__bottom;
+    @include adaptiv-value('margin-top', 33, 18, 1);
+  }
+
+  // .projects__links
+
+  &__links {
+  }
+
+  // .projects__swiper
+
+  &__swiper {
+  }
+
+  // .projects__slide
+
+  &__slide {
+    width: 411px;
+    height: 249px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  // .projects__slide-title
+
+  &__slide-title {
+    @include adaptiv-value('font-size', 18, 15, 1);
+    line-height: 120%;
+    font-weight: bold;
+    color: $textColorWhite;
+    text-align: center;
+  }
+
+  // .projects__slide-link
+
+  &__slide-link {
+    display: inline-flex;
+    @include adaptiv-value('font-size', 18, 15, 1);
+    line-height: 120%;
+    color: $mainColor;
+    background-color: $textColorWhite;
+    min-height: 50px;
+    padding-left: 15 / 18 * 1em;
+    padding-right: 15 / 18 * 1em;
+    border-radius: 22px;
+    align-items: center;
+  }
+
+  // .projects__slide-img
+
+  &__slide-img {
+    z-index: -1;
+  }
+}
+.links {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 11px;
+  // .links__clubs
+
+  &__clubs {
+    @extend %projects__button;
+  }
+
+  // .links__halls
+
+  &__halls {
+    @extend %projects__button;
+  }
+
+  // .links__centrs
+
+  &__centrs {
+    @extend %projects__button;
+  }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+
+.project__swiper-controls {
+}
+
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}

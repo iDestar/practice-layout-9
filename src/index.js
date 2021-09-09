@@ -41,10 +41,19 @@ window.onload = function () {
   });
 };
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.header__swiper', {
   // Optional parameters
 
   slidesPerView: 1,
+  spaceBetween: 30,
+
+  // If we need pagination
+});
+
+const projectsSwiper = new Swiper('.projects__swiper', {
+  // Optional parameters
+
+  slidesPerView: 3,
   spaceBetween: 30,
 
   // If we need pagination

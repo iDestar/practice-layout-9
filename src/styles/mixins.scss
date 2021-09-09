@@ -19,3 +19,50 @@
     #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
   }
 }
+
+%title__block {
+  border-left: solid $orangeColor;
+  @include adaptiv-value('border-width', 5, 3, 1);
+}
+
+%title__top {
+  display: block;
+  position: relative;
+  width: 75px;
+  @include adaptiv-value('height', 5, 3, 1);
+  background-color: $orangeColor;
+}
+
+%title__bottom {
+  display: block;
+  position: relative;
+  width: 75px;
+  @include adaptiv-value('height', 5, 3, 1);
+  background-color: $orangeColor;
+}
+
+%projects__button {
+  padding-right: 23 / 16 * 1em;
+  padding-left: 23 / 16 * 1em;
+  display: inline-flex;
+  min-height: 45px;
+  background-color: $textColorWhite;
+  color: $mainColor;
+  @include adaptiv-value('font-size', 16, 10, 1);
+  line-height: 120%;
+  align-items: center;
+  border-radius: 22px;
+  transition: all 0.3s ease 0s;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+  &:not(:last-child) {
+    @include adaptiv-value('margin-right', 35, 10, 1);
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $orangeColor;
+      color: $textColorWhite;
+    }
+  }
+}

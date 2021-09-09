@@ -55,6 +55,23 @@ const projectsSwiper = new Swiper('.projects__swiper', {
 
   slidesPerView: 3,
   spaceBetween: 30,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+  pagination: {
+    el: '.projects__swiper-dots',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.projects__swiper-arrows-next',
+    prevEl: '.projects__swiper-arrows-prev',
+  },
 
   // If we need pagination
 });

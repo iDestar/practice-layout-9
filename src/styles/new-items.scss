@@ -11,6 +11,7 @@
   // .new-items__title-block
 
   &__title-block {
+    @include adaptiv-value('margin-bottom', 56, 29, 1);
     @extend %title__block;
   }
 
@@ -51,6 +52,8 @@
   &__list-item {
     height: 365px;
     display: flex;
+    box-shadow: 0px 2.99429px 18.7143px rgba(0, 0, 0, 0.13);
+    border-radius: 10px;
     .list-item__text {
       width: 95%;
       align-self: flex-end;
@@ -61,6 +64,9 @@
       font-weight: bold;
       font-size: 12px;
       line-height: 120%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 5px;
     }
     .list-item__link {
       display: none;

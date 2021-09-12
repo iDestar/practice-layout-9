@@ -1,11 +1,12 @@
 @import 'variables.scss';
 @import 'mixins.scss';
-@import 'ui';
+@import 'ui.scss';
 
 .main-second-catalog {
 }
 .second-catalog {
   @include adaptiv-value('padding-top', 100, 49, 1);
+  @include adaptiv-value('padding-bottom', 100, 49, 1);
   // .second-catalog__title-block
 
   &__title-block {
@@ -41,27 +42,62 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fill, 262px);
+    justify-content: center;
+    grid-gap: 20px;
   }
 
   // .second-catalog__list-item
 
   &__list-item {
+    height: 333px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    border-radius: 10px;
+
+    box-shadow: 0px 2.99429px 18.7143px rgb(0 0 0 / 13%);
+    &::after {
+      position: absolute;
+      content: 'PDF (5MB)';
+      font-size: 8px;
+      line-height: 10px;
+      font-weight: 700;
+      right: 0;
+      top: 60px;
+      background-color: $orangeColor;
+      padding: 9px 7px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
   }
 
   // .second-catalog__list-item-text
 
   &__list-item-text {
+    @include adaptiv-value('font-size', 18, 14, 1);
+    text-transform: uppercase;
+    line-height: 120%;
+    font-weight: 700;
+    z-index: 1;
+    color: $orangeColor;
+    max-width: 182px;
+    align-self: flex-start;
+    margin-left: 20px;
   }
 
   // .second-catalog__link
 
   &__link {
+    display: none;
   }
 
   // .second-catalog__item-img
 
   &__item-img {
     object-fit: none;
+    position: relative;
   }
 
   // .second-catalog__item-img-hover
@@ -76,11 +112,20 @@
   // .second-catalog-list__first-item
 
   &__first-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 2.99429px 18.7143px rgb(0 0 0 / 13%);
   }
 }
 .second-catalog-first-item {
   // .second-catalog-first-item__text
 
   &__text {
+    border-left: 5px solid $orangeColor;
+    padding-left: 18px;
+    @include adaptiv-value('font-size', 18, 14, 1);
+    @include adaptiv-value('line-height', 28, 18, 1);
   }
 }

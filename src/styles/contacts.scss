@@ -1,0 +1,102 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.main-contacts {
+  background-color: hsl(0, 0%, 94%);
+}
+.contacts {
+  // .contacts__wrapper
+
+  &__wrapper {
+    padding-top: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .contacts__title
+
+  &__title {
+    @include adaptiv-value('font-size', 30, 18, 1);
+    line-height: 120%;
+    font-family: $fontMulish;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  // .contacts__sub-tittle
+
+  &__sub-tittle {
+    font-size: 14px;
+    font-family: $fontInter;
+    line-height: 150%;
+    font-weight: normal;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 33px;
+  }
+
+  // .contacts__mail-block
+
+  &__mail-block {
+    display: flex;
+
+    @media (max-width: $md3+px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.mail-block {
+  // .mail-block__input
+
+  &__form {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $md3+px) {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    outline: none;
+    min-height: 50px;
+    width: 367px;
+    border: 1px solid $mainColor;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    margin-right: 36px;
+    &::placeholder {
+      padding-left: 28px;
+    }
+    @media (max-width: $md4+px) {
+      width: 272px;
+      margin-right: 0;
+      &::placeholder {
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  // .mail-block__submit
+
+  &__submit {
+    display: inline-block;
+    background: $orangeColor;
+    padding: 13px 35px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    border-radius: 20px;
+    margin-bottom: 25px;
+  }
+}

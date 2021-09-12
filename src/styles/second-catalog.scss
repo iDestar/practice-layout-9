@@ -1,0 +1,86 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'ui';
+
+.main-second-catalog {
+}
+.second-catalog {
+  @include adaptiv-value('padding-top', 100, 49, 1);
+  // .second-catalog__title-block
+
+  &__title-block {
+    @extend %title__block;
+    margin-bottom: 50px;
+  }
+
+  // .second-catalog__top
+
+  &__top {
+    @extend %title__top;
+    @include adaptiv-value('margin-bottom', 33, 18, 1);
+  }
+
+  // .second-catalog__title
+
+  &__title {
+    @include adaptiv-value('font-size', 24, 18, 1);
+    line-height: 120%;
+    font-weight: bold;
+    margin-left: 23px;
+  }
+
+  // .second-catalog__bottom
+
+  &__bottom {
+    @extend %title__bottom;
+    @include adaptiv-value('margin-top', 33, 18, 1);
+  }
+
+  // .second-catalog__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 262px);
+  }
+
+  // .second-catalog__list-item
+
+  &__list-item {
+  }
+
+  // .second-catalog__list-item-text
+
+  &__list-item-text {
+  }
+
+  // .second-catalog__link
+
+  &__link {
+  }
+
+  // .second-catalog__item-img
+
+  &__item-img {
+    object-fit: none;
+  }
+
+  // .second-catalog__item-img-hover
+
+  &__item-img-hover {
+    display: none;
+  }
+}
+.container {
+}
+.second-catalog-list {
+  // .second-catalog-list__first-item
+
+  &__first-item {
+  }
+}
+.second-catalog-first-item {
+  // .second-catalog-first-item__text
+
+  &__text {
+  }
+}

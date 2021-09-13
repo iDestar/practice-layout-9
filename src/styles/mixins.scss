@@ -66,3 +66,19 @@
     }
   }
 }
+
+%footer__list {
+  li:first-of-type {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+  li {
+    font-size: 14px;
+    line-height: 120%;
+  }
+  a {
+    color: $mainColor;
+  }
+}

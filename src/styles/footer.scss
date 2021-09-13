@@ -1,0 +1,195 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.page-footer {
+  @include adaptiv-value('padding-top', 47, 32, 1);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  @media (max-width: $md4+px) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+  }
+  // .footer-top__logo
+
+  &__logo {
+    font-family: $fontRusso;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  // .footer-top__log-first
+
+  &__logo-first {
+    color: $orangeColor;
+  }
+
+  // .footer-top__log-second
+
+  &__logo-second {
+    color: $mainColor;
+  }
+
+  // .footer-top__copyr
+
+  &__copyr {
+    @include adaptiv-value('font-size', 14, 10, 1);
+    line-height: 120%;
+    font-weight: 400;
+  }
+
+  // .footer-top__social-list
+
+  &__social-list {
+  }
+}
+.social-list {
+  display: flex;
+
+  // .social-list__item
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  // .social-list__link
+
+  &__link {
+    &::before {
+      font-size: 20px;
+      color: $orangeColor;
+    }
+  }
+}
+
+.footer-middle {
+  // .footer-middle__block
+
+  &__block {
+  }
+}
+.middle-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 120px 161px 184px 120px 342px);
+
+  grid-gap: 43px;
+  @media (max-width: $md3+px) {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .middle-block__column
+  &__column {
+  }
+
+  // .middle-block__about-list
+
+  &__about-list {
+    @extend %footer__list;
+  }
+
+  // .middle-block__service-list
+
+  &__service-list {
+    @extend %footer__list;
+  }
+
+  // .middle-block__production-list
+
+  &__production-list {
+    @extend %footer__list;
+  }
+
+  // .middle-block__client-list
+
+  &__client-list {
+    @extend %footer__list;
+  }
+
+  // .middle-block__adress-list
+
+  &__adress-list {
+    font-size: 12px;
+  }
+}
+.about-list {
+  // .about-list__item
+
+  &__item {
+  }
+
+  // .about-list__link
+
+  &__link {
+  }
+}
+.service-list {
+  // .service-list__item
+
+  &__item {
+  }
+
+  // .service-list__link
+
+  &__link {
+  }
+}
+.production-list {
+  // .production-list__item
+
+  &__item {
+  }
+
+  // .production-list__link
+
+  &__link {
+  }
+}
+.client-list {
+  // .client-list__item
+
+  &__item {
+  }
+
+  // .client-list__link
+
+  &__link {
+  }
+}
+.adress-list {
+  // .adress-list__item
+
+  &__item {
+  }
+
+  // .adress-list__link
+
+  &__link {
+    color: $mainColor;
+  }
+}
+.footer {
+  // .footer__bottom
+
+  &__bottom {
+  }
+}
+.bottom-footer {
+  // .bottom-footer__first-text
+
+  &__first-text {
+  }
+
+  // .bottom-footer__second-text
+
+  &__second-text {
+  }
+}

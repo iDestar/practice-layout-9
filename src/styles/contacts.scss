@@ -69,17 +69,19 @@
   &__input {
     outline: none;
     min-height: 50px;
-    width: 367px;
+    width: 347px;
     border: 1px solid $mainColor;
     border-radius: 25px;
     margin-bottom: 25px;
     margin-right: 36px;
+    padding-left: 20px;
     &::placeholder {
       padding-left: 28px;
     }
     @media (max-width: $md4+px) {
-      width: 272px;
+      width: 252px;
       margin-right: 0;
+      padding-left: 0;
       &::placeholder {
         padding-left: 0;
         text-align: center;
@@ -99,5 +101,12 @@
     color: #ffffff;
     border-radius: 20px;
     margin-bottom: 25px;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #f3af41;
+        color: $mainColor;
+      }
+    }
   }
 }

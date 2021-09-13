@@ -78,12 +78,15 @@
 .middle-block {
   display: grid;
   grid-template-columns: repeat(auto-fill, 120px 161px 184px 120px 342px);
-
   grid-gap: 43px;
+  @media (max-width: $md1+px) {
+    grid-template-columns: repeat(3, 30%);
+  }
   @media (max-width: $md3+px) {
-    text-align: center;
-    align-items: center;
+    grid-template-columns: repeat(1, 100%);
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   // .middle-block__column
@@ -165,6 +168,9 @@
   }
 }
 .adress-list {
+  width: 100%;
+  text-align: center;
+
   // .adress-list__item
 
   &__item {
